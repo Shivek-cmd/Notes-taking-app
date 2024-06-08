@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Notes-taking-app/static/css/main.e329e843.css",
+    "main.js": "/Notes-taking-app/static/js/main.836a53b4.js",
+    "static/media/image-removebg-preview 1.png": "/Notes-taking-app/static/media/image-removebg-preview 1.051c5dd6cf08bd17366f.png",
+    "index.html": "/Notes-taking-app/index.html",
+    "main.e329e843.css.map": "/Notes-taking-app/static/css/main.e329e843.css.map",
+    "main.836a53b4.js.map": "/Notes-taking-app/static/js/main.836a53b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e329e843.css",
+    "static/js/main.836a53b4.js"
+  ]
+}
