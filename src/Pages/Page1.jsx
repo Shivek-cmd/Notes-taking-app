@@ -105,13 +105,17 @@ function Page1() {
           </>
         ) : (
           <>
-            <img src={Shivek} alt="/blank" className="image-placeholder" />
-            <h3>Pocket Notes</h3>
-            <p className="description">
-              Send and receive messages without keeping your phone{" "}
-              <span style={{ whiteSpace: "nowrap" }}>online</span>.<br />
-              Use Pocket Notes on up to 4 linked devices and 1 mobile phone.
-            </p>
+            <div className="right-default-page">
+              <div className="image-placeholder">
+                <img src={Shivek} alt="/blank" width="50%" />
+              </div>
+              <h3>Pocket Notes</h3>
+              <p className="description">
+                Send and receive messages without keeping your phone{" "}
+                <span style={{ whiteSpace: "nowrap" }}>online</span>.<br />
+                Use Pocket Notes on up to 4 linked devices and 1 mobile phone.
+              </p>
+            </div>
           </>
         )}
       </div>

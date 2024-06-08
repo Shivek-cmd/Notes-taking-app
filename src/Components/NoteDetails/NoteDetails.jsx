@@ -5,11 +5,11 @@ import "./styles.css";
 
 function formatDate(dateTime) {
   const date = new Date(dateTime);
-  return date.toLocaleDateString(undefined, {
+  return new Intl.DateTimeFormat("en-GB", {
     day: "numeric",
     month: "long",
     year: "numeric",
-  });
+  }).format(date);
 }
 
 function formatTime(dateTime) {
@@ -40,7 +40,7 @@ function NoteDetails({
 }) {
   return (
     <>
-      <div className="right-header note-item">
+      <div className="right-header">
         {/* Left arrow button */}
         <button className="back-button" onClick={handleBackButton}>
           <img src={leftArrow} alt="leftarrow" />
@@ -59,8 +59,8 @@ function NoteDetails({
           .map((note, index) => (
             <div className="right-content-data" key={index}>
               <div className="note-info">
-                <div className="note-date">{formatDate(note.dateTime)}</div>
                 <div className="note-time">{formatTime(note.dateTime)}</div>
+                <div className="note-date">{formatDate(note.dateTime)}</div>
               </div>
               <div className="note-data">{note.data}</div>
             </div>

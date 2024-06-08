@@ -63,15 +63,17 @@ function CreateNoteGroupForm({
           </div>
         </div>
       </div>
-      <button
-        type="submit"
-        onClick={() => {
-          setCreateButtonVisible(false);
-        }}
-        className="form-submit-button"
-      >
-        Create
-      </button>
+      <div className="form-submit-button">
+        {" "}
+        <button
+          type="submit"
+          onClick={() => {
+            setCreateButtonVisible(false);
+          }}
+        >
+          Create
+        </button>
+      </div>
     </form>
   );
 }

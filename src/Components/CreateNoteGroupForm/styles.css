@@ -1,50 +1,53 @@
 .form-container {
   position: fixed;
-  bottom: 200px;
+  bottom: 250px;
   right: 380px;
-  width: 35vw;
+
   padding: 1.2rem;
   background-color: #f0f0f0;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 100;
   display: none;
+  height: 40vh;
+  width: 35vw;
 }
 
 .form-container.visible {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 0.5rem;
 }
 
 .form-header {
   font-size: 1.2rem;
   font-weight: 500;
-  margin-left: 1rem;
   display: flex;
   justify-content: flex-start;
 }
-
 .form-content {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-
 .form-group {
-  margin-bottom: 1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .form-label {
-  margin: 0.5rem;
   font-size: 1.2rem;
   font-weight: 500;
   width: 30%;
+  margin-right: 0.2rem;
 }
 
 .form-input {
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
   border: 1px solid #ccc;
   font-size: 1rem;
   width: 70%;
@@ -52,9 +55,10 @@
 
 .color-options {
   display: flex;
-  gap: 0.5rem;
-  margin-left: 2rem;
-  width: 60%;
+  gap: 0.8rem;
+  width: 70%;
+  justify-content: flex-start;
+  margin-left: 0.5rem;
 }
 
 .color-circle {
@@ -65,12 +69,16 @@
 }
 
 .form-submit-button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.form-submit-button button {
+  width: 30%;
+  padding: 0.3rem 0.5rem;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 400;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: black;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -80,5 +88,24 @@
     left: 50px;
     bottom: 200px;
     width: 80vw;
+  }
+
+  .form-header {
+    font-size: 1rem;
+  }
+
+  .form-label {
+    font-size: 1rem;
+  }
+
+  .form-input {
+    font-size: 0.8rem;
+  }
+
+  .form-submit-button {
+    font-size: 1rem;
+  }
+  .color-options {
+    gap: 0.4rem;
   }
 }

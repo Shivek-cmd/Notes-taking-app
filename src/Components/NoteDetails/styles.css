@@ -1,29 +1,27 @@
 .right-header {
-  height: 10vh;
   background-color: #e8e8e8;
-}
-
-.right-content {
-  display: flex;
-  flex-direction: column;
-  height: 60vh;
-  margin-top: 2rem;
-  font-size: 1rem;
-  overflow-y: auto;
-  /* Add scrollbar when content exceeds container height */
-}
-.note-item {
   padding: 1rem;
   border-radius: 5px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  height: 10vh;
 }
 
+.right-content {
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  margin-top: 1rem;
+  font-size: 1rem;
+  overflow-y: auto;
+  /* Add scrollbar when content exceeds container height */
+}
 .right-content-data {
   display: flex;
   margin-bottom: 1.2rem;
-  padding: 0.5rem; /* Adjust as needed */
+  margin-left: 1rem;
+  padding: 0.5rem;
 }
 
 .note-info {
@@ -34,7 +32,6 @@
 
 .note-date,
 .note-time {
-  margin-bottom: 0.5rem; /* Adjust as needed */
   font-weight: 500;
 }
 
@@ -47,14 +44,17 @@
 }
 
 .right-footer {
-  height: 30vh;
+  height: 25vh;
   background-color: #e8e8e8;
   position: relative;
-  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-area {
-  width: 75vw;
+  width: 100%;
+  margin: 0 1rem;
   height: 20vh;
   padding: 0.5rem;
   border: none;
@@ -62,8 +62,8 @@
 }
 .right-arrow {
   position: absolute; /* Set position to absolute */
-  bottom: 70px; /* Adjust the distance from the bottom as needed */
-  right: 15px; /* Adjust the distance from the right as needed */
+  bottom: 25px; /* Adjust the distance from the bottom as needed */
+  right: 30px; /* Adjust the distance from the right as needed */
 }
 
 .note-color-circle {

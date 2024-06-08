@@ -11,7 +11,12 @@ function getGroupInitials(groupName) {
   }
 }
 
-function NoteGroupList({ notesTitle, handleGroupSelection, selectedGroup }) {
+function NoteGroupList({
+  notesTitle,
+  handleGroupSelection,
+  selectedGroup,
+  isMobileView,
+}) {
   return (
     <div className="notesTitle-list">
       {notesTitle.map((note, index) => (
@@ -19,7 +24,11 @@ function NoteGroupList({ notesTitle, handleGroupSelection, selectedGroup }) {
           key={note.id}
           className="note-item border"
           style={{
-            backgroundColor: selectedGroup === index ? "#f7ecdc" : "white",
+            backgroundColor: isMobileView
+              ? "white"
+              : selectedGroup === index
+              ? "#f7ecdc"
+              : "white",
           }}
           onClick={() => handleGroupSelection(index)}
         >
