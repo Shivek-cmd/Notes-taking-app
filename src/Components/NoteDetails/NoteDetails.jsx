@@ -1,6 +1,8 @@
 import React from "react";
 import rightArrow from "../../assets/rightArrow.png";
+import leftArrow from "../../assets/leftArrow.png"; // Importing left arrow icon
 import "./styles.css";
+
 function formatDate(dateTime) {
   const date = new Date(dateTime);
   return date.toLocaleDateString(undefined, {
@@ -34,10 +36,15 @@ function NoteDetails({
   notesData,
   setNotesData,
   handleNoteData,
+  handleBackButton, // Add handleBackButton prop
 }) {
   return (
     <>
       <div className="right-header note-item">
+        {/* Left arrow button */}
+        <button className="back-button" onClick={handleBackButton}>
+          <img src={leftArrow} alt="leftarrow" />
+        </button>
         <div
           className="note-color-circle "
           style={{ backgroundColor: notesTitle[selectedGroup].color }}

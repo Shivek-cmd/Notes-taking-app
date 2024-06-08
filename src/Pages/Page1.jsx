@@ -5,6 +5,7 @@ import Shivek from "../assets/image-removebg-preview 1.png";
 import CreateNoteGroupForm from "../Components/CreateNoteGroupForm/CreateNoteGroupForm.jsx";
 import NoteGroupList from "../Components/NoteGroupList/NoteGroupList.jsx";
 import NoteDetails from "../Components/NoteDetails/NoteDetails.jsx";
+
 import "./styles.css";
 
 function Page1() {
@@ -12,6 +13,7 @@ function Page1() {
   const [notesTitle, setNotesTitle] = useState([]);
   const [notesData, setNotesData] = useState("");
   const [selectedGroup, setSelectedGroup] = useState(null);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
 
   const createButton = () => {
     setCreateButtonVisible(true);
@@ -43,6 +45,19 @@ function Page1() {
     setSelectedGroup(selectedGroup === index ? null : index);
   };
 
+  const handleBackButton = () => {
+    setSelectedGroup(null);
+  };
+
+  const handleResize = () => {
+    setIsMobileView(window.innerWidth <= 768);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="page1-container">
       {createButtonVisible && (
@@ -51,7 +66,11 @@ function Page1() {
           onClick={() => setCreateButtonVisible(false)}
         />
       )}
-      <div className="left-container ">
+      <div
+        className={`left-container ${
+          selectedGroup !== null && isMobileView ? "hidden" : ""
+        }`}
+      >
         <div className="header">Pocket Notes</div>
         <div className="create-button-wrapper">
           <button onClick={createButton} className="create-button">
@@ -65,17 +84,25 @@ function Page1() {
           notesTitle={notesTitle}
           handleGroupSelection={handleGroupSelection}
           selectedGroup={selectedGroup}
+          isMobileView={isMobileView}
         />
       </div>
-      <div className="right-container ">
+      <div
+        className={`right-container ${
+          selectedGroup === null && isMobileView ? "hidden" : ""
+        }`}
+      >
         {selectedGroup !== null ? (
-          <NoteDetails
-            selectedGroup={selectedGroup}
-            notesTitle={notesTitle}
-            notesData={notesData}
-            setNotesData={setNotesData}
-            handleNoteData={handleNoteData}
-          />
+          <>
+            <NoteDetails
+              selectedGroup={selectedGroup}
+              notesTitle={notesTitle}
+              notesData={notesData}
+              setNotesData={setNotesData}
+              handleNoteData={handleNoteData}
+              handleBackButton={handleBackButton}
+            />
+          </>
         ) : (
           <>
             <img src={Shivek} alt="/blank" className="image-placeholder" />
