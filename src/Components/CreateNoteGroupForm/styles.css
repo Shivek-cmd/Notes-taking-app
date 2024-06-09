@@ -2,7 +2,6 @@
   position: fixed;
   bottom: 250px;
   right: 380px;
-
   padding: 1.2rem;
   background-color: #f0f0f0;
   border-radius: 10px;
@@ -17,7 +16,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 0.5rem;
 }
 
 .form-header {
@@ -34,8 +32,6 @@
 .form-group {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
 }
 
 .form-label {
@@ -51,14 +47,15 @@
   border: 1px solid #ccc;
   font-size: 1rem;
   width: 70%;
+  margin-left: 2rem;
 }
 
 .color-options {
   display: flex;
   gap: 0.8rem;
-  width: 70%;
+  width: 60%;
   justify-content: flex-start;
-  margin-left: 0.5rem;
+  margin-left: 2rem;
 }
 
 .color-circle {
@@ -85,21 +82,29 @@
 }
 @media screen and (max-width: 768px) {
   .form-container {
-    left: 50px;
-    bottom: 200px;
+    left: 25px;
+    bottom: 300px;
     width: 80vw;
+    height: 30vh;
   }
-
+  .form-header {
+    margin-bottom: 0.5rem;
+  }
+  .form-content {
+    gap: 1rem;
+  }
   .form-header {
     font-size: 1rem;
   }
 
   .form-label {
     font-size: 1rem;
+    width: 30%;
   }
 
   .form-input {
     font-size: 0.8rem;
+    width: 70%;
   }
 
   .form-submit-button {
@@ -107,5 +112,11 @@
   }
   .color-options {
     gap: 0.4rem;
+  }
+  .form-submit-button {
+    justify-content: center;
+  }
+  .form-submit-button button {
+    width: 70%;
   }
 }

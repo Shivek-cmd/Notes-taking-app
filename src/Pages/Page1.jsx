@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import Shivek from "../assets/image-removebg-preview 1.png";
@@ -14,6 +14,24 @@ function Page1() {
   const [notesData, setNotesData] = useState("");
   const [selectedGroup, setSelectedGroup] = useState(null);
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+
+  // Load data from localStorage
+  useEffect(() => {
+    const storedNotesTitle = localStorage.getItem("notesTitle");
+    if (storedNotesTitle) {
+      console.log(
+        "Loaded data from localStorage:",
+        JSON.parse(storedNotesTitle)
+      );
+      setNotesTitle(JSON.parse(storedNotesTitle));
+    }
+  }, []);
+
+  // Save data to localStorage whenever notesTitle changes
+  useEffect(() => {
+    console.log("Saving data to localStorage:", notesTitle);
+    localStorage.setItem("notesTitle", JSON.stringify(notesTitle));
+  }, [notesTitle]);
 
   const createButton = () => {
     setCreateButtonVisible(true);
