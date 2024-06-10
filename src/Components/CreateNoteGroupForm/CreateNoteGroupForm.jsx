@@ -32,7 +32,7 @@ function CreateNoteGroupForm({
       <div className="form-header">Create New Notes Group</div>
       <div className="form-content">
         <div className="form-group">
-          <label className="form-label">Group Name</label>
+          <label className="form-label">Group Name</label>{" "}
           <input
             type="text"
             placeholder="Enter your group name..."
@@ -44,7 +44,7 @@ function CreateNoteGroupForm({
           />
         </div>
         <div className="form-group">
-          <label className="form-label">Choose color:</label>
+          <label className="form-label">Choose color</label>
           <div className="color-options ">
             {colors.map((color) => (
               <div

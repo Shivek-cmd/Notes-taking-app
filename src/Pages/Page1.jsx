@@ -15,24 +15,23 @@ function Page1() {
   const [selectedGroup, setSelectedGroup] = useState(null);
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
 
-  // Load data from localStorage
+  // Load notesTitle from localStorage on component mount
   useEffect(() => {
     const storedNotesTitle = localStorage.getItem("notesTitle");
     if (storedNotesTitle) {
-      console.log(
-        "Loaded data from localStorage:",
-        JSON.parse(storedNotesTitle)
-      );
-      setNotesTitle(JSON.parse(storedNotesTitle));
+      try {
+        setNotesTitle(JSON.parse(storedNotesTitle));
+      } catch (error) {
+        console.error("Failed to parse notesTitle from localStorage:", error);
+        localStorage.removeItem("notesTitle"); // Remove corrupted data
+      }
     }
   }, []);
 
-  // Save data to localStorage whenever notesTitle changes
+  // Save notesTitle to localStorage whenever it changes
   useEffect(() => {
-    console.log("Saving data to localStorage:", notesTitle);
     localStorage.setItem("notesTitle", JSON.stringify(notesTitle));
   }, [notesTitle]);
-
   const createButton = () => {
     setCreateButtonVisible(true);
   };

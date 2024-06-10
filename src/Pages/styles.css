@@ -92,6 +92,12 @@
   .right-container {
     width: 100vw;
   }
+  .create-button-wrapper {
+    width: 100%;
+  }
+  .create-button {
+    font-size: 1.3rem;
+  }
   .back-button {
     display: block;
 

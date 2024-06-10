@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Page1 from "./Pages/Page1.jsx";
 
