@@ -1,3 +1,4 @@
+/* Styling for the header in the right container */
 .right-header {
   background-color: #e8e8e8;
   padding: 1rem;
@@ -8,15 +9,16 @@
   height: 10vh;
 }
 
+/* Styling for the content in the right container */
 .right-content {
   display: flex;
   flex-direction: column;
   height: 60vh;
   font-size: 1rem;
   overflow-y: auto;
-
-  /* Add scrollbar when content exceeds container height */
 }
+
+/* Styling for each data item in the right content */
 .right-content-data {
   display: flex;
   margin-top: 1rem;
@@ -25,17 +27,20 @@
   padding: 0.5rem;
 }
 
+/* Styling for information of each note */
 .note-info {
   display: flex;
   flex-direction: column;
-  margin-right: 3rem; /* Adjust as needed */
+  margin-right: 3rem;
 }
 
+/* Styling for note date and time */
 .note-date,
 .note-time {
   font-weight: 500;
 }
 
+/* Styling for the data of each note */
 .note-data {
   display: flex;
   flex-direction: column;
@@ -44,6 +49,7 @@
   font-weight: 400;
 }
 
+/* Styling for the footer in the right container */
 .right-footer {
   height: 30vh;
   background-color: #e8e8e8;
@@ -52,6 +58,7 @@
   flex-direction: row;
 }
 
+/* Styling for the text area for entering notes */
 .text-area {
   width: 100%;
   margin: 1rem;
@@ -60,13 +67,16 @@
   border: none;
   resize: none;
 }
+
+/* Styling for the right arrow icon */
 .right-arrow {
   width: 10%;
-  position: absolute; /* Set position to absolute */
-  bottom: 35px; /* Adjust the distance from the bottom as needed */
-  right: 2px; /* Adjust the distance from the right as needed */
+  position: absolute;
+  bottom: 35px;
+  right: 2px;
 }
 
+/* Styling for the circle indicating note color */
 .note-color-circle {
   width: 38px;
   height: 38px;
@@ -80,21 +90,28 @@
   color: #fff;
   text-align: center;
 }
+
+/* Media query for smaller screens */
 @media (max-width: 768px) {
+  /* Adjust left margin for each data item in right content */
   .right-content-data {
     margin-left: 0.3rem;
   }
 
+  /* Adjust margin and width for note data */
   .note-data {
     margin-right: 2rem;
     width: 70%;
   }
 
+  /* Adjust margin, height, and width for text area */
   .text-area {
     margin-top: 1.5rem;
     height: 80%;
     width: 100%;
   }
+
+  /* Adjust position of right arrow */
   .right-arrow {
     bottom: 40px;
     right: 25px;

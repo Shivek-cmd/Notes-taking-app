@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# Pocket Notes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pocket Notes is a web application for managing your notes conveniently. You can create note groups, add notes to them, and view/edit/delete them easily.
+
+## Features
+
+- Create and manage multiple note groups
+- Add notes with date and time stamps
+- Responsive design for desktop and mobile devices
+
+## Technologies Used
+
+- React.js
+- FontAwesome for icons
+- localStorage for data persistence
+- CSS for styling
 
 ## Available Scripts
 

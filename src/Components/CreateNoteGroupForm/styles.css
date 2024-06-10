@@ -1,8 +1,8 @@
+/* Styling for the form container used to create a new note group */
 .form-container {
   position: fixed;
   bottom: 250px;
   right: 380px;
-
   background-color: #f0f0f0;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -12,12 +12,14 @@
   width: 45vw;
 }
 
+/* Show the form container when it's visible */
 .form-container.visible {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
+/* Header style for the form */
 .form-header {
   font-size: 1.2rem;
   font-weight: 500;
@@ -25,23 +27,29 @@
   display: flex;
   justify-content: flex-start;
 }
+
+/* Content style for the form */
 .form-content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
+
+/* Styling for form groups */
 .form-group {
   display: flex;
   align-items: center;
   margin: 0rem 1rem;
 }
 
+/* Label style for form inputs */
 .form-label {
   font-size: 1.2rem;
   font-weight: 500;
   width: 30%;
 }
 
+/* Styling for form inputs */
 .form-input {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
@@ -50,6 +58,7 @@
   width: 65%;
 }
 
+/* Styling for color options in the form */
 .color-options {
   display: flex;
   margin-left: 2rem;
@@ -58,6 +67,7 @@
   justify-content: flex-start;
 }
 
+/* Styling for color circles in the form */
 .color-circle {
   width: 20px;
   height: 20px;
@@ -65,11 +75,14 @@
   cursor: pointer;
 }
 
+/* Styling for the submit button container */
 .form-submit-button {
   display: flex;
   justify-content: flex-end;
   margin-right: 1rem;
 }
+
+/* Styling for the submit button */
 .form-submit-button button {
   width: 30%;
   padding: 0.3rem 0.5rem;
@@ -81,7 +94,10 @@
   border: none;
   cursor: pointer;
 }
+
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
+  /* Adjust form container position and size for mobile view */
   .form-container {
     left: 10vw;
     top: 80vw;
@@ -89,40 +105,48 @@
     height: 22vh;
   }
 
+  /* Adjust header font size and margin for mobile view */
   .form-header {
     font-size: 1rem;
     margin-left: 1rem;
   }
 
+  /* Adjust gap between form content for mobile view */
   .form-content {
     gap: 0.8rem;
   }
 
+  /* Adjust margin for form group for mobile view */
   .form-group {
     margin: 0rem 0.2rem;
   }
 
+  /* Adjust label font size and width for mobile view */
   .form-label {
     font-size: 0.9rem;
     width: 40%;
   }
 
+  /* Adjust input field padding, width, and font size for mobile view */
   .form-input {
     padding: 0.5rem 0.8rem;
     width: 55%;
     font-size: 0.8rem;
   }
 
+  /* Adjust margin, width, and gap for color options for mobile view */
   .color-options {
     margin-left: 0.5rem;
     width: 55%;
     gap: 0.3rem;
   }
 
+  /* Adjust margin for form submit button for mobile view */
   .form-submit-button {
     margin-right: 0.6rem;
   }
 
+  /* Adjust style for form submit button for mobile view */
   .form-submit-button button {
     width: 45%;
     padding: 0.2rem;

@@ -1,3 +1,4 @@
+/* Styling for the list of notes titles */
 .notesTitle-list {
   margin-top: 1rem;
   cursor: pointer;
@@ -5,6 +6,7 @@
   height: 75vh;
 }
 
+/* Styling for each note item */
 .note-item {
   padding: 1rem;
   display: flex;
@@ -12,10 +14,13 @@
   align-items: center;
   margin-left: 2rem;
 }
+
+/* Border styling */
 .border {
   border-radius: 1.5rem 0 0 1.5rem;
 }
 
+/* Styling for the circle indicating note color */
 .note-color-circle {
   width: 2.2rem;
   height: 2.2rem;
@@ -30,6 +35,7 @@
   text-align: center;
 }
 
+/* Styling for the note name */
 .note-name {
   font-size: 1.2rem;
   font-weight: 500;

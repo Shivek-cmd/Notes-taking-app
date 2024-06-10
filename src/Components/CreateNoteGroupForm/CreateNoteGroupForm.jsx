@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 
+// Pre-defined colors for note group titles
 const colors = [
   "#B38BFA",
   "#FF79F2",
@@ -10,27 +11,34 @@ const colors = [
   "#6691FF",
 ];
 
+// Component for creating a new note group
 function CreateNoteGroupForm({
-  createButtonVisible,
-  setCreateButtonVisible,
-  addNoteGroup,
+  createButtonVisible, // Prop to control visibility of the form
+  setCreateButtonVisible, // Function to toggle visibility of the create button
+  addNoteGroup, // Function to add a new note group
 }) {
+  // State variables for group name and selected title color
   const [groupName, setGroupName] = useState("");
   const [selectedTitleColor, setSelectedTitleColor] = useState("#B38BFA");
 
+  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     addNoteGroup(groupName, selectedTitleColor);
-    setGroupName("");
+    setGroupName(""); // Clear group name after submission
   };
 
   return (
+    // Form for creating a new note group
     <form
       onSubmit={handleSubmit}
       className={`form-container ${createButtonVisible ? "visible" : ""}`}
     >
+      {/* Form header */}
       <div className="form-header">Create New Notes Group</div>
+      {/* Form content */}
       <div className="form-content">
+        {/* Input field for group name */}
         <div className="form-group">
           <label className="form-label">Group Name</label>{" "}
           <input
@@ -43,9 +51,11 @@ function CreateNoteGroupForm({
             className="form-input"
           />
         </div>
+        {/* Color selection for group title */}
         <div className="form-group">
           <label className="form-label">Choose color</label>
           <div className="color-options ">
+            {/* Display color options */}
             {colors.map((color) => (
               <div
                 key={color}
@@ -63,12 +73,12 @@ function CreateNoteGroupForm({
           </div>
         </div>
       </div>
+      {/* Submit button */}
       <div className="form-submit-button">
-        {" "}
         <button
           type="submit"
           onClick={() => {
-            setCreateButtonVisible(false);
+            setCreateButtonVisible(false); // Hide create button after form submission
           }}
         >
           Create

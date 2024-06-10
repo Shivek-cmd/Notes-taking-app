@@ -1,3 +1,4 @@
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
@@ -5,21 +6,24 @@
   font-family: "Roboto", sans-serif;
 }
 
+/* Container for the entire page */
 .page1-container {
   display: flex;
   position: relative;
 }
 
+/* Overlay for modal or pop-up */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 99; /* Place it on top */
 }
 
+/* Left container for note group list */
 .left-container {
   height: 100vh;
   width: 25vw;
@@ -28,6 +32,7 @@
   justify-content: flex-start;
 }
 
+/* Header for the left container */
 .header {
   display: flex;
   justify-content: flex-start;
@@ -37,11 +42,13 @@
   font-weight: 500;
 }
 
+/* Container for create button */
 .create-button-wrapper {
   display: flex;
   justify-content: space-around;
 }
 
+/* Create button */
 .create-button {
   margin-top: 0.5rem;
   display: flex;
@@ -57,11 +64,14 @@
   cursor: pointer;
 }
 
+/* Right container for note details */
 .right-container {
   height: 100vh;
   width: 75vw;
-  background-color: #f7ecdc;
+  background-color: #f7ecdc; /* Light background color */
 }
+
+/* Default page content in the right container */
 .right-default-page {
   height: 100vh;
   display: flex;
@@ -69,42 +79,50 @@
   justify-content: center;
 }
 
+/* Placeholder for images */
 .image-placeholder {
   display: flex;
   justify-content: center;
 }
 
+/* Description text */
 .description {
   margin-top: 0.5rem;
 }
 
+/* Hide elements with this class */
 .hidden {
   display: none;
 }
+
+/* Back button */
 .back-button {
-  display: none;
+  display: none; /* Initially hidden */
 }
 
+/* Media query for smaller screens */
 @media (max-width: 768px) {
+  /* Adjust left and right containers for mobile view */
   .left-container {
     width: 100vw;
   }
   .right-container {
     width: 100vw;
   }
+  /* Adjust create button wrapper */
   .create-button-wrapper {
     width: 100%;
   }
+  /* Style adjustments for create button */
   .create-button {
     font-size: 1.3rem;
   }
+  /* Show back button on smaller screens */
   .back-button {
     display: block;
-
     padding: 0.5rem 1rem 0.5rem 0rem;
-    background-color: #e8e8e8;
+    background-color: #e8e8e8; /* Light gray background */
     border: none;
-
     cursor: pointer;
   }
 }
